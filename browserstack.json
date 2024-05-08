@@ -32,7 +32,16 @@
         "build_name": "eniola-build",
         "exclude": [],
         "parallels": "3",
-        "npm_dependencies": {},
+        "npm_dependencies": {    
+            "@badeball/cypress-cucumber-preprocessor": "^20.0.5",
+            "@cypress/browserify-preprocessor": "^3.0.2",
+            "@faker-js/faker": "^8.4.1",
+            "browserstack-cypress-cli": "^1.30.0",
+            "cypress": "^13.8.1",
+            "cypress-fill-command": "^1.0.2",
+            "cypress-mailslurp": "^1.10.0",
+            "multiple-cucumber-html-reporter": "^3.6.2"
+        },
         "package_config_options": {},
         "headless": true
     },
