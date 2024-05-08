@@ -1,0 +1,22 @@
+{
+    "searchField": "div[id='entry_217822'] input[placeholder='Search For Products']",
+    "firstProduct": "a[id='mz-product-grid-image-28-212469'] div[class='carousel-item active'] img[title='HTC Touch HD']",
+    "cartIcon": "button[class='btn btn-cart cart-28'] i[class='fas fa-shopping-cart']",
+    "searchWord": "HTC",
+    "productAction": "body > div:nth-child(1) > div:nth-child(6) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+    "checkout": ".form-row > :nth-child(2) > .btn",
+    "firstname": "[name='firstname']",
+    "lastname": "[name='lastname']",
+    "email": "[name='email']",
+    "telephone": "[name='telephone']",
+    "password": "[name='password']",
+    "confirmPassword": "[name='confirm']",
+    "address1": "[name='address_1']",
+    "city": "[name='city']",
+    "postcode": "[name='postcode']",
+    "newsletter": "label[for='input-newsletter']",
+    "privacy": "label[for='input-account-agree']",
+    "tandc": "label[for='input-agree']",
+    "continue": "#button-save",
+    "confirmOrder": "#button-confirm"
+}
