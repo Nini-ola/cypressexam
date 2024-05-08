@@ -21,6 +21,6 @@ module.exports = defineConfig({
     watchForFileChanges: false,
     experimentalRunAllSpecs: true,
     specPattern: '**/*.feature',
-    setupNodeEvents
-  }
+    setupNodeEvents,
+  },
 });
