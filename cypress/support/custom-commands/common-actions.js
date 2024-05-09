@@ -8,20 +8,8 @@ before(() => {
   })
 })
 
-Cypress.Commands.add('clickSpecifiedElement', (element) => {
-    cy.contains(element).should('be.visible').click()
-})
-
-Cypress.Commands.add('assertPage', (element) => {
-    cy.contains(element).should('be.visible')
-})
-
 Cypress.Commands.add('clickElement', (element) => {
     cy.get(element).click()
-})
-
-Cypress.Commands.add('checkout', () => {
-    cy.get(data.checkout).click({force: true})
 })
 
 Cypress.Commands.add('addDetails', (field, text) => {
@@ -35,10 +23,6 @@ Cypress.Commands.add('searchProduct', () => {
 Cypress.Commands.add('hoverMode', () => {
     cy.get(data.firstProduct).trigger('mouseover')
     cy.get(data.productAction).should('exist')
-})
-
-Cypress.Commands.add('clickHiddenElement', (element) => {
-    cy.get(element).click({ force: true })
 })
 
 Cypress.Commands.add('insertDetails', (string) => {
@@ -69,5 +53,43 @@ Cypress.Commands.add('insertDetails', (string) => {
             break
         case 'post code':
             cy.addDetails(data.postcode, 'LG2 1XY')
+    }
+})
+
+Cypress.Commands.add('clickAction', (string) => {
+    switch (string) {
+        case 'Search':
+            cy.contains('Search').should('be.visible').click()
+            break
+        case 'cart icon':
+            cy.get(data.cartIcon).click({ force: true })
+            break
+        case 'cart checkout':
+            cy.get(data.checkout).click({force: true})
+            break
+        case 'Store newsletter':
+            cy.clickElement(data.newsletter)
+            break
+        case 'privacy':
+            cy.clickElement(data.privacy)
+            break
+        case 'terms and conditions':
+            cy.clickElement(data.tandc)
+            break
+        case 'continue':
+            cy.clickElement(data.continue)
+            break
+        case 'Confirm Order':
+            cy.clickElement(data.confirmOrder)
+    }
+})
+
+Cypress.Commands.add('assertAction', (string) => {
+    switch (string) {
+        case 'Confirm Order page':
+            cy.contains("Payment Address").should('be.visible')
+            break
+        case 'Order Placed page':
+            cy.contains("Your order has been placed").should('be.visible')
     }
 })
